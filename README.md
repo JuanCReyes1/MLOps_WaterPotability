@@ -1,7 +1,7 @@
-cookiecutter
+
 ==============================
 
-mlopstesting
+MLOps for Water Quality Control using a Cookiecutter Template
 
 Project Organization
 ------------
