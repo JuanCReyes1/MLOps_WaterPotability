@@ -32,6 +32,7 @@ def save_data(df : pd.DataFrame, filepath : str) -> None:
 def main():
     try:
 
+
         raw_data_path = "./data/raw"
         processed_data_path = "./data/processed"
 
@@ -45,7 +46,8 @@ def main():
 
         save_data(train_processed_data,os.path.join(processed_data_path, "train_processed.csv"))
         save_data(test_processed_data,os.path.join(processed_data_path, "test_processed.csv"))
-                
+
+
     except Exception as e:
          raise Exception("An error occurred: {e}")
          

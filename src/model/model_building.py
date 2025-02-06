@@ -45,6 +45,7 @@ def train_model(X: pd.DataFrame, y : pd.Series, n_estimators : int) -> RandomFor
 def save_model(model: RandomForestClassifier, filepath: str) -> None:
     try:
         with open(filepath, "wb") as file:
+            print(filepath)
             pickle.dump(model,file)
     except Exception as e:
         raise Exception(f"Error saving the model: {e}")
@@ -53,7 +54,7 @@ def main():
     try:
         params_path = "params.yaml"
         data_path = "./data/processed/train_processed.csv"
-        model_name = "./models/model.pkl"
+        model_name = "./models/model.pkl" 
 
         n_estimators = load_params(params_path)
         train_data = load_data(data_path)
